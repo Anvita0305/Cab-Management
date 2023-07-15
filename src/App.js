@@ -11,6 +11,8 @@ import Contact from "./Components/Contact/Contact";
 import Cab from "./Components/Cab/Cab";
 import ADriver from "./Components/ADriver/ADriver";
 import ACab from "./Components/ACab/ACab";
+import Dall from "./Components/Dall/Dall";
+import Call from "./Components/Call/Call";
 
 
 function App() {
@@ -42,6 +44,12 @@ function App() {
                 </Route>
                 <Route path='/addriver' element={<PrivateRoute route='/signin' />}>
                   <Route path="/addriver" element={<ADriver/>} />
+                </Route>
+                <Route path='/drivers/:id' element={<PrivateRoute route='/signin' />}>
+                  <Route path="/drivers/:id" element={<Dall/>} />
+                </Route>
+                <Route path='/cabs/:id' element={<PrivateRoute route='/signin' />}>
+                  <Route path="/cabs/:id" element={<Call/>} />
                 </Route>
                 <Route path='/adcab' element={<PrivateRoute route='/signin' />}>
                   <Route path="/adcab" element={<ACab/>} />
