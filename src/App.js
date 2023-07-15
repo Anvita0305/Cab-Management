@@ -8,6 +8,7 @@ import Drivers from "./Components/Drivers/Drivers";
 import Cabs from "./Components/Cabs/Cabs";
 import Driver from "./Components/Driver/Driver";
 import Contact from "./Components/Contact/Contact";
+import Cab from "./Components/Cab/Cab";
 
 
 function App() {
@@ -33,6 +34,9 @@ function App() {
                 </Route>
                 <Route path='/driver/:id' element={<PrivateRoute route='/signin' />}>
                   <Route path="/driver/:id" element={<Driver/>} />
+                </Route>
+                <Route path='/cab/:id' element={<PrivateRoute route='/signin' />}>
+                  <Route path="/cab/:id" element={<Cab/>} />
                 </Route>
                 <Route path="/contact" element={<Contact />} />
       </Routes>

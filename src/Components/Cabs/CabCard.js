@@ -4,7 +4,7 @@ import "./Cabs.css"
 export default function CabCard({item}) {
   return (
     <div>
-        <Link to={`/driver/${item.id}`} className="data-card">
+        <Link to={`/cab/${item.id}`} className="data-card">
             <h3>{item.cabreg}</h3>
             <h4>{item.model}</h4>
             <p>{item.color}</p>
