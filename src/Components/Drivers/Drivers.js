@@ -3,6 +3,7 @@ import Navbar from "../Navbar/Navbar"
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import DriverCard from "./DriverCard";
+import { Link } from 'react-router-dom';
 
 function Drivers() {
   // const [data, setData] = useState([]);
@@ -21,6 +22,9 @@ function Drivers() {
   return (
     <div>
     <Navbar/>
+    <div className="towork">
+    <Link to={`/addriver`} className="todecide">Add Driver</Link>
+    </div>
     <section className="page-contain">
         {data.length===0 ? (<h3>No Drivers Yet!</h3>) :
               data.map((item)=>{

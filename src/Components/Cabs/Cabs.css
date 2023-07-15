@@ -25,6 +25,18 @@
     transition: transform 0.45s ease, background 0.45s ease;
 }
 
+.towork{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 9rem;
+    margin-top: 1rem;
+}
+
+.todecide{
+    text-decoration: none;
+    color: #753bbd;
+}
+
 
 .data-card h3 {
     color: #2E3C40;

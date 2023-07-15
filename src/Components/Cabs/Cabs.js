@@ -4,6 +4,7 @@ import Footer from "../Footer/Footer"
 import Navbar from "../Navbar/Navbar"
 import CabCard from "./CabCard"
 import "./Cabs.css"
+import { Link } from 'react-router-dom';
 
 
 function Cabs() {
@@ -23,6 +24,9 @@ function Cabs() {
   return (
     <div>
       <Navbar/>
+      <div className="towork">
+      <Link to={`/adcab`} className="todecide">Add Cab</Link>
+      </div>
       <section className="page-contain">
         {data.length===0 ? (<h3>No Cabs Yet!</h3>) :
               data.map((item)=>{

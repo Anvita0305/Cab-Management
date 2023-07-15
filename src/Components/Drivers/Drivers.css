@@ -9,6 +9,18 @@
     padding: 2em;
     font-family: 'Open Sans', sans-serif;
 }
+.towork{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 9rem;
+    margin-top: 1rem;
+}
+
+.todecide{
+    text-decoration: none;
+    color: #753bbd;
+}
+
 .data-card {
     display: flex;
     flex-direction: column;
