@@ -6,9 +6,10 @@ import axios from "axios";
 function Dcard({item}) {
   const navigate = useNavigate()
   const [disable, setdisable] = useState(true);
-  const [reg, setreg] = useState(item.reg);
-  const [model, setmodel] = useState(item.model);
-  const [color, setcolor] = useState(item.color);
+  const [reg, setreg] = useState(item.cab_registration_number);
+  const [model, setmodel] = useState(item.cab_model
+    );
+  const [color, setcolor] = useState(item.cab_colour);
   const handledis=()=>{
     setdisable(false)
   }
@@ -22,7 +23,7 @@ function Dcard({item}) {
       color:color
     }
     let gh=item.id
-    axios.post(`http://localhost:8080/updatecab/${gh}`,data)
+    axios.put(`http://localhost:8080/updateCab/${gh}`,data)
     .then(response => {
       toast.success("data updated sucessfully")
       console.log(response.data);
@@ -35,7 +36,7 @@ function Dcard({item}) {
   }
   const hng1=()=>{
     let gh=item.id
-    axios.delete(`http://localhost:8080/deletecab/${gh}`)
+    axios.delete(`http://localhost:8080/deleteCab/${gh}`)
     .then(response => {
       toast.success("Cab deleted Successfully")
       navigate("/drivers")

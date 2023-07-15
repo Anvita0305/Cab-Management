@@ -38,7 +38,7 @@
 }
 
 
-.data-card h3 {
+.data-card h5 {
     color: #2E3C40;
     font-size: 3.5em;
     font-weight: 600;
@@ -49,7 +49,7 @@
     transition: color .45s ease, border .45s ease;
   }
 
-.data-card h4 {
+.data-card h6 {
     color: #2e3c40;
     font-size: 3.5em;
     font-weight: 600;

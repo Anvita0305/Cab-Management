@@ -6,19 +6,20 @@ import DriverCard from "./DriverCard";
 import { Link } from 'react-router-dom';
 
 function Drivers() {
-  // const [data, setData] = useState([]);
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await axios.get('http://localhost:8080/getdrivers');
-  //       setData(response.data);
-  //     } catch (error) {
-  //       console.error('Error fetching data:', error);
-  //     }
-  //   };
-  //   fetchData(); 
-  // }, []);
-  let data=[{id:1,name:'mayur',contact_number:'45',email:'hj'}] 
+   const [data, setData] = useState([]);
+   useEffect(() => {
+     const fetchData = async () => {
+       try {
+         const response = await axios.get('http://localhost:8080/driverDetails');
+         setData(response.data);
+         console.log(response.data);
+       } catch (error) {
+         console.error('Error fetching data:', error);
+       }
+     };
+     fetchData();
+   }, []);
+//  let data=[{id:1,name:'mayur',contact_number:'45',email:'hj'}]
   return (
     <div>
     <Navbar/>

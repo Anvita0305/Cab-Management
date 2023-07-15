@@ -11,13 +11,14 @@ export default function ACab() {
   const [reg, setreg] = useState('');
   const [model, setmodel] = useState('');
   const [color, setcolor] = useState('');
+  const [id, setid] = useState('');
   const hng=()=>{
     const data={
-        reg:reg,
-        model:model,
-        color:color
+        cabRegistrationNumber:reg,
+        carModel:model,
+        carColour:color
       }
-    axios.post(`http://localhost:8080/adcab`,data)
+    axios.post(`http://localhost:8080/addCab`,data)
     .then(response => {
       toast.success("Cab Added sucessfully")
       navigate('/cabs')
@@ -40,6 +41,8 @@ export default function ACab() {
         <input className="input-tags" placeholder="Model number" value={model} onChange={(e) => setmodel(e.target.value)} />
         <p>Color:</p>
         <input className="input-tags" placeholder="Color" value={color} onChange={(e) => setcolor(e.target.value)} />
+        <p>Unique Id :</p>
+        <input className="input-tags" placeholder="Id" value={id} onChange={(e) => setid(e.target.value)}  />
         <br></br>
         {<button className='' style={{marginTop:5}} onClick={hng}>Add Cab</button>}
         <p class="cardf-footer">Go Ahead with Afourathon.</p>

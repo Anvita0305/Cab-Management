@@ -9,21 +9,21 @@ import "./call.css"
 
 export default function Call() {
     const { id }=useParams();
-    // const [data, setData] = useState([]);
+    const [data, setData] = useState([]);
   
-    // useEffect(() => {
-    //   const fetchData = async () => {
-    //     try {
-    //       const response = await axios.get(`http://localhost:8080/cabs/${id}`);
-    //       setData(response.data);
-    //     } catch (error) {
-    //       console.error('Error fetching data:', error);
-    //     }
-    //   };
+    useEffect(() => {
+      const fetchData = async () => {
+        try {
+          const response = await axios.get(`http://localhost:8080/driverDetails/${id}?id=${id}`);
+          setData(response.data);
+        } catch (error) {
+          console.error('Error fetching data:', error);
+        }
+      };
   
-    //   fetchData();
-    // }, []); 
-    let data=[{id:1,name:'mayur',email:'45',color:'hj'}] 
+      fetchData();
+    }, []); 
+    // let data=[{id:1,name:'mayur',email:'45',color:'hj'}] 
   return (
     <div>
         <Navbar/>

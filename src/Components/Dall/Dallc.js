@@ -5,9 +5,10 @@ export default function DriverCard({item}) {
   return (
     <div>
         <Link to={`/driver/${item.id}`} className="data-card">
-            <h3>{item.reg}</h3>
-            <h4>{item.model}</h4>
-            <p>{item.color}</p>
+            <h5>{item.cab_registration_number}</h5>
+            <br></br>
+            <h5>{item.cab_model}</h5>
+            <p>{item.cab_colour}</p>
             <span className="link-text">
             View Cab
             </span>

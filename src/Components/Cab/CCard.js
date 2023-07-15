@@ -16,17 +16,21 @@ function CCard({item}) {
     setdisable(true)
   }
   const hng=()=>{
-    const data={
-      name:nams,
-      contact_number:cons,
-      email:ems
-    }
-    let gh=item.id
-    axios.post(`http://localhost:8080/updatedriver/${gh}`,data)
-    .then(response => {
-      toast.success("data updated sucessfully")
-      console.log(response.data);
-    })
+    // const data={
+    //   name:nams,
+    //   contact_number:cons,
+    //   email:ems
+    // }
+    let gh=item.email
+    console.log(gh);
+    axios.post(`http://localhost:8080/updateDriver/${gh}`, null, {
+                params: {
+                    name: nams,
+                    email: ems,
+                    contact: cons,
+                    id: item.id,
+                },
+            })
     .catch(error => {
       toast.error("Error Updating data! please try again")
       console.error('Error:', error);
@@ -34,8 +38,8 @@ function CCard({item}) {
 
   }
   const hng1=()=>{
-    let gh=item.id
-    axios.delete(`http://localhost:8080/deletedriver/${gh}`)
+    let gh=item.email
+    axios.delete(`http://localhost:8080/deleteDriver/${gh}?email=${gh}`)
     .then(response => {
       toast.success("Driver deleted Successfully")
       navigate("/cabs")

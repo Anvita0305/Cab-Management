@@ -38,24 +38,24 @@
 }
 
 
-.data-card h3 {
+.data-card h5 {
     color: #2E3C40;
-    font-size: 3.5em;
+    font-size: 1em;
     font-weight: 600;
     line-height: 1;
-    padding-bottom: .5em;
-    margin: 0 0 0.142857143em;
+    /* padding-bottom: .5em; */
+    /* margin: 0 0 0.142857143em; */
     border-bottom: 2px solid #753BBD;
     transition: color .45s ease, border .45s ease;
   }
 
-.data-card h4 {
+.data-card h6 {
     color: #2e3c40;
-    font-size: 3.5em;
+    /* font-size: 1em; */
     font-weight: 600;
     line-height: 1;
-    padding-bottom: 0.5em;
-    margin: 0 0 0.142857143em;
+    /* padding-bottom: 0.5em; */
+    /* margin: 0 0 0.142857143em; */
     transition: color 0.45s ease, border 0.45s ease;
 }
 
@@ -81,11 +81,11 @@
     background: #753bbd;
     transform: scale(1.02);
 }
-.data-card:hover h3 {
+.data-card:hover h4 {
     color: #fff;
     border-bottom-color: #a754c4;
 }
-.data-card:hover h4 {
+.data-card:hover h6 {
     color: #fff;
 }
 .data-card:hover p {

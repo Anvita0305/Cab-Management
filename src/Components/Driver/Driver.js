@@ -7,23 +7,26 @@ import axios from "axios";
 import DCard from "./Dcard";
 
 function Driver() {
-  const { id }=useParams();
-  // const [data, setData] = useState({});
+  const { id } =useParams();
+  console.log(id);
+   const [data, setData] = useState([]);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await axios.get(`http://localhost:8080/cab/${id}`);
-  //       setData(response.data);
-  //     } catch (error) {
-  //       console.error('Error fetching data:', error);
-  //     }
-  //   };
+   useEffect(() => {
+     const fetchData = async () => {
+       try {
+         const response = await axios.get(`http://localhost:8080/cabDetails/${id}?id=${id}`);
+         setData(response.data);
+         console.log(response.data);
+         
+       } catch (error) {
+         console.error('Error fetching data:', error);
+       }
+     };
 
-  //   fetchData();
-  // }, []); 
+     fetchData();
+   }, []);
 
-  let data=[{id:1,reg:'mayur',model:'45',color:'hj'}] 
+//  let data=[{id:1,reg:'mayur',model:'45',color:'hj'}]
 
   return (
     <div>
